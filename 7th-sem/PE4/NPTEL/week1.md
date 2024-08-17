@@ -119,6 +119,8 @@
     * The links comprising the path are not dedicated
 
 * Working
+    * To set up virtual circuit, a _call request packet_ is sent and it also sets up the routing tables.
+    * The _call accept packet_ is an ack packet that the virtual circuit has been setup.
     * Route is established a priori.
     * Packet forwarded from 1 node to the next using store-and-forward scheme.
     * Only the virtual circuit number needs to be carried out by the packet.
@@ -126,3 +128,84 @@
         2) Created during route establishment.
         3) Used for packet forwarding.
     * No dynamic routing decesion is taken by the intermediate nodes.
+
+# Basic Concepts of Networking (part-2)
+
+## Data Communication over a Network
+### Datagram approach
+
+* No route is established beforehand
+* Each packet is transmitted as an independent entity
+* Does not maintain any history
+
+* Every intermediate node has to take routing decesions dynamically.
+    * Makes use of a routing table
+    * Every Packet must contain source and destination adresses.
+
+* Problems:
+    * Packets may be delivered out of order
+    * if a node crashes momentarily, all of its queued packets are lost.
+    * Duplicated packets may also be generated.
+
+* Advantages
+    1) Faster than Virtual Circuit for smaller number of packets
+    2) More flexible.
+    3) Packets between 2 hosts may follow different paths
+
+### Types of delays 
+
+>There are 3 types of delays
+
+1) Propagation delay (based on physical Link)
+    * time taken by data signal to propagate from 1 node to the next.
+2) Tansmission time (based on Bandwidth)
+    * Time taken to send out a packet by the transmitter
+3) Processing Delay
+    * Time taken by a node to process a packet.
+
+## Layered Network Architecture
+
+### OSI (Open systems interconnection)
+> 7 layer model
+
+* Objective:
+    * Systematic approach to design
+    * Changes in one layer should not require changes in other layer.
+
+* Layers 
+    1) Application
+    2) Presentation
+    3) Session
+    4) Transport
+    5) Network
+    6) Datalink
+    7) Physical
+
+7) Physical
+    * Transmit raw bit stream over a physical medium
+6) Datalink
+    * Relaible transfer of frames over a p2p link with flow control and error control
+5) Network
+    * Establishing, maintaining and terminating connections.
+    * Routes packets through p2p links.
+
+4) Transport 
+    * End to End reliable data transfer, with error recovery and flow control.
+3) Session
+    * manages sessions
+2) Presentation
+    * provides data independence
+1) Application
+    * Interface point for user applications
+
+<img src = "data_flow.png">
+
+### Networking devices
+
+1) Hub (Physical layer)
+    * Extends the span of a single LAN.
+2) Bridge (at the Data Link layer)
+    * Connects 2 or more LAN's together
+3) Router (Network layer)
+    * Connects any combination of LANs and WANs.
+

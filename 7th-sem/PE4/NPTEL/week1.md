@@ -68,6 +68,61 @@
     * Hybrid of the white and black box models.
     * Company gives tester partial information.
 
+# Basice Concepts of Networking
 
+* Major types of Computer Networks
+    * LAN: same room, building, campus. Faster and Cheaper.
+    * WAN: Across campuses, cities, countries, continents. Slower and Expensive.
 
+## Data Communication over a Network
 
+### Circuit switching
+* A dedicated communication path established between 2 stations.
+    * The path follows a fixed sequence of intermediate links.
+    * A logical channel gets defined on each physical link.
+
+* There are 3 steps that are followed
+    * Connection establishment
+    * Data Transfer
+    * Connection termination
+
+* Drawbacks
+    * There is initial delay
+    * Channel capacity is dedicated ducring the entire duration of communication, This is inefficient as computer data communication is bursty in nature.
+
+### Packet switching
+* Modern form of long data communication
+    * Network resources are not dedicated
+    * All links can be shared
+* The basic technology has evolved over time.
+* Data are transmitted in short packets.
+* Every packet contains a header which is required for routing.
+* Packet switching is based on store-and-forward concept.
+    * The packets are stored in a buffer in in termediate nodes before transmission.
+    * Each intermediate node recieves a whole packet.
+    * They also decide the next route
+    * Forwards the packet along the selected route.
+* Each intermediate node maintains a routing table.
+
+* Advantages:
+    1) Links can be shared,
+    2) Suitable for bursty traffic
+    3) Buffering and data rate conversion can be done
+    4) Some packets may be given priority based on user's requests.
+
+>Packets are transmitted using 2 approaches, Virtual circuits and Datagram 
+
+### Virtual Circuit
+* Similar to circuit switching
+    *  A route is established before packet transmission starts.
+    * All packets follow the same path.
+    * The links comprising the path are not dedicated
+
+* Working
+    * Route is established a priori.
+    * Packet forwarded from 1 node to the next using store-and-forward scheme.
+    * Only the virtual circuit number needs to be carried out by the packet.
+        1) each intermediate node maintains a table.
+        2) Created during route establishment.
+        3) Used for packet forwarding.
+    * No dynamic routing decesion is taken by the intermediate nodes.

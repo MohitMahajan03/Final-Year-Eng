@@ -209,3 +209,55 @@
 3) Router (Network layer)
     * Connects any combination of LANs and WANs.
 
+## TCP/IP protocol stack
+
+* TCP/IP Started in 1970 by Advanced Research Project Agency (ARPA) funded by US Military.
+* It contains a 4 layer model.
+
+<img src = "tcp,ip.png">
+<img src = "data_trans.png">
+
+### TCP/IP Protocol Suite
+
+* The protocols are built on top of connectionless technology (datagrams)
+    * Data is sent from one node to another as a sequence of datagrams.
+    * Each datagram is sent independently.
+    * The datagrams corresponding to same message may follow different routes.
+
+<img src = "family.png">
+
+* ARP
+    * Maps IP address to MAC address
+* RARP
+    * converts MAC to IP address
+* ICMP
+    * A network device can send error messages and other information.
+* IGMP
+    * A node can send multicast group membership to adjacent routers.
+
+### IP
+* Routing od packets from source to destination
+* Breaks a packet into smaller packets.
+* Unreliable service
+    * A packet may be lost in transit
+    * Packet duplication.
+    * Packets arriving out of order
+
+### TCP
+* Provides a connection-oriented, reliable service
+* Split a message into packets
+* Reassemble packets at destination
+* resend packets that were lost in transit
+* Error control is done by TCP
+
+### UDP
+* PRovides a conectionless, unreliable service for sending datagram packets
+* messages small enough to fit in a packet
+* simpler and faster than TCP
+* Never split data into multiple packets
+* Does not care about error control
+
+### Encapulation in TFPT
+
+<img src = "TFTP.png">
+

@@ -261,3 +261,16 @@
 
 <img src = "TFTP.png">
 
+## IP layer
+
+* provides connectionless and unreliable packet delivery system
+* Each packet is independent of one another.
+* Each packet contains a IP layer encapsulation (typically 20 bytes of header)
+
+<img src = "ip_header.png">
+
+## Packet Sniffers
+* Wireshark
+* Tcpdump
+* Wndump
+* SolarWinds

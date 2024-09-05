@@ -39,3 +39,31 @@ Disadvantages:
 
 * Ethernet has a maximum frame size of 1500 bytes.
 * Therefore to reduce fragmentation in further layers, IP limits the packets fragmentation size to 1500 bytes
+
+## IP addressing and Routing
+
+* IP address is a 32 bit number.
+* Each octet is seperated by a "." like W.X.Y.Z. (ex: 66.134.48.126)
+* IP address consists of A network number and A host number.
+* This partition defines the IP address classes.
+
+### Heirarchical addressing
+* When routing to destination network only the network number is looked at.
+* Inside destination network only the host number is looked at.
+
+There are 5 defined IP address classes.
+* Class A UNICAST
+* Class B UNICAST
+* Class C UNICAST
+* Class D MULTICAST
+* Class E RESERVED
+
+<img src = "classA.png">
+<img src = "classB.png">
+<img src = "classC.png">
+
+>Class D address range: 244.0.0.0 to 239.255.255.255
+
+<img src = "special.png">
+
+<img src = "convention.png">

@@ -222,3 +222,6 @@ Empirical research is focused on collecting and analyzing data through direct ob
 - Empirical research can validate, refine, or challenge conceptual models, leading to further theoretical development.
 
 In essence, conceptual research is about thinking and theorizing, providing the ideas and frameworks that shape our understanding, while empirical research is about doing and observing, collecting the data that supports or refines those ideas. Both approaches are essential to advancing knowledge and understanding in any field.
+
+# Actual notes starts here
+

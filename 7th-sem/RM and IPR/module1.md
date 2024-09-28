@@ -492,3 +492,5 @@ Step 5: Review of Findings
 
 ## Q4 Distinguish between Research methods and Research methodology 
 
+## Q5 Describe the techniques of defining a research problem.
+

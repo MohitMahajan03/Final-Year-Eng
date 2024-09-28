@@ -103,3 +103,47 @@
 
 #### Functional procedure of BGP
 <img src = "bgp_procedure.png">
+
+## IPv6
+
+### Dr
+
+* Limited address space (32-bit addresses)
+* Applications demanding real time response
+    * Must avoid changing routes frequently
+* Need for more complex addressing and routing capabilities
+    * 2 level structure of IPv4 may not serve the purpose.
+
+### Features
+
+* Common features are: 
+    * Connectionless protocol
+    * Header contains TTL
+    * Some of the other general characteristics are also retained
+
+* New Features
+    * 128 bit address size for devices
+    * Uses a series of fixed-length headers to handle optional information.
+    * A datagram consists of a base header followed by 0 or more extension headers
+    * Support for real time traffic
+    * Allows a pair of stations to establish high quality path
+    * Increased flexibility in addressing
+    * Includes the concept of an anycast address, where a packet is delivered to one of a set of nodes
+    * Provides dynamic assignment of IP adresses
+
+* An IP datagram has a base header, followed by 0 or more extension headers, followed by the data
+
+<img src = "base_header.png">
+
+<img src = "h_fields.png">
+
+<img src = "ex_h.png">
+
+<img src = "v6_addr.png">
+
+>IPv6 Uses colon-hexadecimal notation. Each group of 16 bits written in hex, with a colon separating groups.
+
+<img src = "ex_ipv6">
+
+<img src = "aggr.png">
+

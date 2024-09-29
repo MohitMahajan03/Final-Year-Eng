@@ -147,3 +147,7 @@
 
 <img src = "aggr.png">
 
+
+## Routing Examples
+
+>These are numericals therefore refer week 3 last video

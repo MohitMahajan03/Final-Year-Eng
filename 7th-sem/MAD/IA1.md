@@ -80,13 +80,147 @@ Ans:
 -resource
 
 # 5.Creating virtual device
+
+* With	virtual	device	emulators,	you	can	test	an	app	on	different	devices	such	as	tablets	or	smartphones	—	with	different	API
+* levels	for	different	Android	versions	—	to	make	sure	it	looks	good	and	works	for	most	users.	Although	it's	a	good	idea,	you
+ don't	have	to	depend	on	having	a	physical	device	available	for	app	development.
+* The	Android	Virtual	Device	(AVD)	manager	creates	a	virtual	device	or	emulator	that	simulates	the	configuration	for	a  particular	type	of	Android	device.	Use	the	AVD	Manager	to	define	the	hardware	characteristics	of	a	device	and	its	API	level,  and	to	save	it	as	a	virtual	device	configuration.	
+* When	you	start	the	Android	emulator,	it	reads	a	specified	configuration	and  creates	an	emulated	device	on	your	computer	that	behaves	exactly	like	a	physical	version	of	that	device.
+### Creating	a	virtual	device
+* To	run	an	emulator	on	your	computer,	use	the	AVD	Manager	to	create	a	configuration	that	describes	the	virtual	device.
+* Select	Tools	>	Android	>	AVD	Manager,	or	click	the	AVD	Manager	icon in	the	toolbar.
+* The	"Your	Virtual	Devices"	screen	appears	showing	all	of	the	virtual	devices	created	previously.	Click	the	+Create	Virtual  Device	button	to	create	a	new	virtual	device.	
+* You	can	select	a	device	from	a	list	of	predefined	hardware	devices.	For	each	device,	the	table	shows	its	diagonal	display  size	(Size),	screen	resolution	in	pixels	(Resolution),	and	pixel	density	(Density).	For	example,	the	pixel	density	of	the	Nexus  5	device	is		xxhdpi	,	which	means	the	app	uses	the	icons	in	the	xxhdpi	folder	of	the	mipmap	folder.	Likewise,	the	app	will  use	layouts	and	drawables	from	folders	defined	for	that	density	as	well.	
+*You	also	choose	the	version	of	the	Android	system	for	the	device.	The	Recommended	tab	shows	the	recommended  systems	for	the	device.	More	versions	are	available	under	the	x86	Images	and	Other	Images	tabs
  
 # 6.Running the app on a physical device
 
+### Running	the	app	on	a	physical	device
+* Always	test	your	apps	on	physical	device,	because	users	will	use	the	app	on	physical	devices.	While	emulators	are	quite  good,	they	can't	show	all	possible	device	states,	such	as	what	happens	if	an	incoming	call	occurs	while	the	app	is	running.
+* To	run	the	app	on	a	physical	device,	you	need	the	following:
+1. An	Android	device	such	as	a	smartphone	or	tablet.
+2. A	data	cable	to	connect	the	Android	device	to	your	computer	via	the	USB	port.
+3. If	you	are	using	Linux	or	Windows,	it	may	be	necessary	to	perform	additional	steps	to	run	the	app	on	a	hardware device.	
+4. Check	the	Using	Hardware	Devices	documentation.	On	Windows,	you	may	need	to	install	the	appropriate	USB  driver	for	the	device.	See	OEM	USB	Drivers.
+5. To	let	Android	Studio	communicate	with	a	device,	turn	on	USB	Debugging	on	the	Android	device.	On	Android	version	4.2  and	newer,	the	Developer	options	screen	is	hidden	by	default.	
+>Follow	these	steps	to	turn	on	USB	Debugging:
+ 1.	On	the	physical	device,	open	Settings	and	choose	About	phone	at	the	bottom	of	the	Settings	screen.
+ >Create	Your	First	Android	App
+ 2.	Tap	the	Build	number	information	seven	times.  You	read	that	correctly:	Tap	it	seven	times.
+ 3.	Return	to	the	previous	screen	(Settings).	Developer	options	now	appears	at	the	bottom	of	the	screen.	Tap
+ Developer	options.
+ 4.	Choose	USB	Debugging.  Now,	connect	the	device	and	run	the	app	from	Android	Studio.
+
 # 7.Types of Layout
+
+ Some	view	groups	are	designated	as	layouts	because	they	organize	child	views	in	a	specific	way	and	are	typically	used	as
+ the	root	view	group.	Some	examples	of	layouts	are:
+* LinearLayout:	A	group	of	child	views	positioned	and	aligned	horizontally	or	vertically.
+* RelativeLayout:	A	group	of	child	views	in	which	each	view	is	positioned	and	aligned	relative	to	other	views	within	the  view	group.	In	other	words,	the	positions	of	the	child	views	can	be	described	in	relation	to	each	other	or	to	the	parent  view	group.
+* ConstraintLayout:	A	group	of	child	views	using	anchor	points,	edges,	and	guidelines	to	control	how	views	are  positioned	relative	to	other	elements	in	the	layout.	ConstraintLayout	was	designed	to	make	it	easy	to	drag	and	drop  views	in	the	layout	editor.
+* TableLayout:	A	group	of	child	views	arranged	into	rows	and	columns.
+* AbsoluteLayout:	A	group	that	lets	you	specify	exact	locations	(x/y	coordinates)	of	its	child	views.	Absolute	layouts	are  less	flexible	and	harder	to	maintain	than	other	types	of	layouts	without	absolute	positioning.
+* FrameLayout:	A	group	of	child	views	in	a	stack.	FrameLayout	is	designed	to	block	out	an	area	on	the	screen	to	display  one	view.	Child	views	are	drawn	in	a	stack,	with	the	most	recently	added	child	on	top.	The	size	of	the	FrameLayout	is  the	size	of	its	largest	child	view.
+* GridLayout:	A	group	that	places	its	child	screens	in	a	rectangular	grid	that	can	be	scrolled.	
 
 # 8.Explain XML attributes
 
+ XML	attributes	(view	properties)
+ Views	have	properties	that	define	where	a	view	appears	on	the	screen,	its	size,	how	the	view	relates	to	other	views,	and  how	it	responds	to	user	input.	When	defining	views	in	XML,	the	properties	are	referred	to	as	attributes.
+> For	example,	in	the	following	XML	description	of	a	TextView,	the		android:id	,		android:layout_width	, 	android:layout_height	,		android:background	,	are	XML	attributes	that	are	translated	automatically	into	the	TextView's properties:
+* _<TextView_
+							android:id="@+id/show_count"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:background="@color/myBackgroundColor"
+							android:textStyle="bold"
+							android:text="@string/count_initial_value"
+ _/>_
+
+* Attributes	generally	take	this	form: android:attribute_name="value"
+* The	attribute_name	is	the	name	of	the	attribute.	The	value	is	a	string	with	the	value	for	the	attribute.	For	example: android:textStyle="bold"
+* If	the	value	is	a	resource,	such	as	a	color,	the		@		symbol	specifies	what	kind	of	resource.	For	example:  android:background="@color/myBackgroundColor"  myBackgroundColor	,	which	is	declared	to	be	The	background	attribute	is	set	to	the	color	resource	identified	as	
+* Color	resources	are	described	in	"Style-related	attributes"	in	this	chapter.
+* Every	view	and	view	group	supports	its	own	variety	of	XML	attributes.	Some	attributes	are	specific	to	a	view	(for	example,  TextView	supports	the	#FFF043	.  textSize		attribute),	but	these	attributes	are	also	inherited	by	any	views	that	may	extend	the  TextView	class.	Some	are	common	to	all	views,	because	they	are	inherited	from	the	root	View	class	(like	the	android:id attribute).	
+* For	descriptions	of	specific	attributes,	see	the	overview	section	of	the	View	class	documentation.
+### Identifying	a	view 
+* To	uniquely	identify	a	view	and	reference	it	from	your	code,	you	must	give	it	an	id.	
+1. The android:id		attribute	lets	you  specify	a	unique	id		—	a	resource	identifier	for	a	view. For	example:  android:id="@+id/button_count"
+2. The	"@+id/button_count"		part	of	the	above	attribute	creates	a	new	(	+	)	symbol	to	indicate	that	you	are	creating	a	new	Referencing	a	view id	. To	refer	to	an	existing	resource	identifier,	omit	the	plus	( attribute,	such	as	id		called	button_count		for	the	view.	You	use	the	plus +	)	symbol.	For	example,	to	refer	to	a	view	by	its	id		in	another  android:layout_toLeftOf		(described	in	the	next	section)	to	control	the	position	of	a	view,	you	would	use:  android:layout_toLeftOf="@id/show_count"
+> In	the	above	attribute, "@id/show_count"		refers	to	the	view	with	the	resource	identifier	the	view	to	be	"to	the	left	of"	the	show_count		view. Positioning	views show_count.	
+
+* The	attribute	positions
+ Some	layout-related	positioning	attributes	are	required	for	a	view,	and	automatically	appear	when	you	add	the	view	to	the
+ XML	layout,	ready	for	you	to	add	values.
+* LinearLayout	positioning
+ For	example,	LinearLayout	is	required	to	have	these	attributes	set:
+ android:layout_width
+ android:layout_height
+ android:orientation
+ The	
+android:layout_width and	 android:layout_height		attributes	can	take	one	of	three	values:
+1. match_parent		expands	the	view	to	fill	its	parent	by	width	or	height.	When	the	LinearLayout	is	the	root	view,	it	expands  to	the	size	of	the	device	screen.	For	a	view	within	a	root	view	group,	it	expands	to	the	size	of	the	parent	view	group.
+2. wrap_content		shrinks	the	view	dimensions	just	big	enough	to	enclose	its	content.	(If	there	is	no	content,	the	view becomes	invisible.)  Use	a	fixed	number	of	dp		(device-independent	pixels)	to	specify	a	fixed	size,	adjusted	for	the	screen	size	of	the device.	For	example,	16dp		means	16	device-independent	pixels.	Device-independent	pixels	and	other	dimensions	are described	in	"Dimensions"	in	this	chapter.
+* The android:orientation		can	be:
+1. horizontal:		Views	are	arranged	from	left	to	right.
+2. vertical:		Views	are	arranged	from	top	to	bottom.
+* Other	layout-related	attributes	include:
+1. Android:layout_gravity	:	This	attribute	is	used	with	a	view	to	control	where	the	view	is	arranged	within	its	parent	view  group.	For	example,	the	following	attribute	centers	the	view	horizontally	on	the	screen:  android:layout_gravity="center_horizontal"
+2. Padding	is	the	space,	measured	in	device-independent	pixels,	between	the	edges	of	the	view	and	the	view's	content,
+ as	shown	in	the	figure	below.	
+In	the	figure	above:
+ 1.	Padding	is	the	space	between	the	edges	of	the	view	(dashed	lines)	and	the	view's	content	(solid	line).	Padding	is	not
+ the	same	as	margin,	which	is	the	space	from	the	edge	of	the	view	to	its	parent.
+ A	view's	size	includes	its	padding.	The	following	are	commonly	used	padding	attributes:
+ Android:padding	:	Sets	the	padding	of	all	four	edges.
+ android:paddingTop	:	Sets	the	padding	of	the	top	edge.
+ android:paddingBottom	:	Sets	the	padding	of	the	bottom	edge.
+ android:paddingLeft	:	Sets	the	padding	of	the	left	edge.
+ android:paddingRight	:	Sets	the	padding	of	the	right	edge.
+ android:paddingStart	:	Sets	the	padding	of	the	start	of	the	view;	used	in	place	of	the	above,	especially	with	views	that are	long	and	narrow.
+ android:paddingEnd	:	Sets	the	padding,	in	pixels,	of	the	end	edge;	used	along	with	android:paddingStart	.
+ Tip:	To	see	all	of	the	XML	attributes	for	a	LinearLayout,	see	the	Summary	section	of	the	LinearLayout	reference	in	the
+ Developer	Guide.	Other	root	layouts,	such	as	RelativeLayout	and	AbsoluteLayout,	list	their	XML	attributes	in	the	Summary  sections.
+### RelativeLayout	Positioning
+ Another	useful	view	group	for	layout	is	RelativeLayout,	which	you	can	use	to	position	child	views	relative	to	each	other	or	to  the	parent.	The	attributes	you	can	use	with	RelativeLayout	include	the	following:
+1. android:layout_toLeftOf:	Positions	the	right	edge	of	this	view	to	the	left	of	another	view	(identified	by	its	
+ID	).
+2. android:layout_toRightOf:	Positions	the	left	edge	of	this	view	to	the	right	of	another	view	(identified	by	its	
+ID	).
+3. android:layout_centerHorizontal:	Centers	this	view	horizontally	within	its	parent.
+4. android:layout_centerVertical:	Centers	this	view	vertically	within	its	parent.
+5. android:layout_alignParentTop:	Positions	the	top	edge	of	this	view	to	match	the	top	edge	of	the	parent.
+6. android:layout_alignParentBottom:	Positions	the	bottom	edge	of	this	view	to	match	the	bottom	edge	of	the	parent.
+ For	a	complete	list	of	attributes	for	views	in	a	RelativeLayout,	see	RelativeLayout.LayoutParams.
+### Style-related	attributes
+ You	specify	style	attributes	to	customize	the	view's	appearance.	Views	that	don't	have	style	attributes,	such	as
+1. android:textColor	,	
+2. android:textSize	,	and	
+3. android:background	,	take	on	the	styles	defined	in	the	app's	theme.
+> The	following	are	style-related	attributes	used	in	the	XML	layout	example	in	the	previous	section:
+* Android:background	:	Specifies	a	color	or	drawable	resource	to	use	as	the	background.
+* android:text	:	Specifies	text	to	display	in	the	view.
+* android:textColor	:	Specifies	the	text	color.
+* android:textSize	:	Specifies	the	text	size.
+* android:textStyle	:	Specifies	the	text	style,	such	as	 bold	
+
 # 9.The onClick attribute
+
+### The	onClick	attribute
+ Android	Studio	provides	a	shortcut	for	setting	up	a	clickable	view,	and	for	associating	an	event	handler	with	the	view:	use  the	android:onClick		attribute	with	the	clickable	view's	element	in	the	XML	layout.
+ For	example,	the	following	XML	expression	in	the	layout	file	for	a	Button	sets	android:onClick="showToast"  showToast()		as	the	event	handler:
+ When	the	button	is	tapped,	its android:onClick		attribute	calls	the	Write	the	event	handler,	such	as	showToast()		method.
+ showToast()		referenced	in	the	XML	code	above,	to	call	other	methods	that	implement	the app's	model	logic:
+ <br> <br>
+ public	void	showToast(View	view)	{
+ //	Do	something	in	response	to	the	button	click.
+ }
+ In	order	to	work	with	the	android:onClick		attribute,	the	showToast()		method	must	be	public	,	return	void	,	and	require	a view		parameter	in	order	to	know	which	view	called	the	method.
+ Android	Studio	provides	a	shortcut	for	creating	an	event	handler	stub	(a	placeholder	for	the	method	that	you	can	fill	in	later)  in	the	Java	code	for	the	activity	associated	with	the	XML	layout.	Follow	these	steps:
+ 1.	Inside	the	XML	layout	file	(such	as	activity_main.xml),	click	the	method	name	in	the	
+android:onClick		attribute
+ statement.
+ 2.	Press	Alt-Enter	in	Windows	or	Option-Return	in	Mac	OS	X,	and	select	Create	onClick	event	handler.
+ 3.	Choose	the	activity	associated	with	the	layout	file	(such	as	MainActivity)	and	click	OK.	This	creates	a	placeholder method	stub	in	MainActivity.java.
 
 # 10.Design a XML Page for the given Application.

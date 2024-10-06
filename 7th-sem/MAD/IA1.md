@@ -85,7 +85,9 @@ Example: If you're creating a "ToDoApp", you might choose Kotlin as the language
 Example: Dragging a Button from the Palette to the layout editor adds the following XML:
 xml
 Copy code
->< Button android:text="Click Me" ... />
+```xml
+<Button android:text="Click Me" ... />
+```
 * Component Tree: The Component Tree provides a hierarchical view of the UI elements. It shows how different components are nested within layout structures. For instance, if a Button is added inside a LinearLayout, it will appear as a child of the layout in the tree.
 
 Example:
@@ -98,14 +100,17 @@ LinearLayout
 Example: In Code view, you might manually modify the text of a Button:
 xml
 Copy code
->< Button android:text="Submit" ... />
+```xml
+<Button android:text="Submit" ... />
+```
 * Attribute Section: The Attribute Section allows you to modify the properties (e.g., text size, color, margins) of selected components. For example, selecting a TextView in the Design view opens the attributes panel where you can adjust its properties.
 
 Example: Setting the text size in the Attribute Section results in XML like this:
 xml
 Copy code
->< TextView android:textSize="20sp" />
-
+```xml
+<TextView android:textSize="20sp"/>
+```
 
 
 # 4.Exploring project - android studio
@@ -122,19 +127,21 @@ After creating a project, understanding its structure is essential for effective
 Example: To request internet access, you add:
 xml
 Copy code
-> *< uses-permission android:name="android.permission.INTERNET" />*
+```xml
+<uses-permission android:name="android.permission.INTERNET"/>
+```
 
 * Java: The java/ directory contains the source code. This includes activity classes that manage the app's user interface and logic. The MainActivity.java file typically contains the app's main screen.
 
 Example: In MainActivity.java, you might add a button click event:
 java
 Copy code
-_Button button = findViewById(R.id.button);_
-_button.setOnClickListener(v -> {_
-    _Toast.makeText(this, "Button Clicked", Toast.LENGTH_SHORT).show();_ 
-_});_
-
-<br><br>
+```java
+Button button = findViewById(R.id.button);
+button.setOnClickListener(v -> {
+    Toast.makeText(this, "Button Clicked", Toast.LENGTH_SHORT).show(); 
+});
+```
 
 * Resources (res): The res/ directory holds all non-code resources, such as layouts, strings, images, and menus.
 
@@ -142,13 +149,18 @@ layout/: Contains XML files that define the UI layout.
 Example: activity_main.xml might define a simple layout with a TextView:
 xml
 Copy code
->< LinearLayout><br>    < TextView android:text="Hello, World!" /> <br> < /LinearLayout>
-
+```xml
+<LinearLayout>
+	<TextView android:text="Hello, World!"/> 
+</LinearLayout>
+```
 values/: Stores reusable constants like strings, colors, and dimensions.
 Example: A string resource for the app name:
 xml
 Copy code
->< string name="app_name">MyFirstApp</ string>
+```xml
+<string name="app_name">MyFirstApp</string>
+```
 drawable/: Contains images or vector assets used in the app.
 menu/: Stores XML files that define menu structures.
 This structured approach helps developers separate code from resources, making apps easier to maintain and scale.
@@ -203,15 +215,16 @@ This structured approach helps developers separate code from resources, making a
  XML	attributes	(view	properties)
  Views	have	properties	that	define	where	a	view	appears	on	the	screen,	its	size,	how	the	view	relates	to	other	views,	and  how	it	responds	to	user	input.	When	defining	views	in	XML,	the	properties	are	referred	to	as	attributes.
 > For	example,	in	the	following	XML	description	of	a	TextView,	the		android:id	,		android:layout_width	, 	android:layout_height	,		android:background	,	are	XML	attributes	that	are	translated	automatically	into	the	TextView's properties:
-* _<TextView_ 
-<br>
-							android:id="@+id/show_count" <br>
-							android:layout_width="match_parent"<br>
-							android:layout_height="wrap_content"<br>
-							android:background="@color/myBackgroundColor"<br>
-							android:textStyle="bold"<br>
-							android:text="@string/count_initial_value"<br>
- _/>_
+```xml
+ <TextView 
+							android:id="@+id/show_count" 
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:background="@color/myBackgroundColor"
+							android:textStyle="bold"
+							android:text="@string/count_initial_value"
+ />
+```
 
 * Attributes	generally	take	this	form: android:attribute_name="value"
 * The	attribute_name	is	the	name	of	the	attribute.	The	value	is	a	string	with	the	value	for	the	attribute.	For	example: android:textStyle="bold"
@@ -300,3 +313,42 @@ android:onClick		attribute
  3.	Choose	the	activity	associated	with	the	layout	file	(such	as	MainActivity)	and	click	OK.	This	creates	a	placeholder method	stub	in	MainActivity.java.
 
 # 10.Design a XML Page for the given Application.
+
+Here’s a simple Android app layout in XML that consists of a `TextView`, an `EditText`, and a `Button` placed in a vertical `LinearLayout`:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Simple App!"
+        android:textSize="24sp"
+        android:textColor="#000000"
+        android:layout_marginBottom="20dp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your name"
+        android:inputType="text"
+        android:layout_marginBottom="20dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit" />
+
+</LinearLayout>
+```
+
+This layout places a greeting message at the top (`TextView`), a text input field (`EditText`), and a submit button (`Button`) below it, all centered vertically in a `LinearLayout`.

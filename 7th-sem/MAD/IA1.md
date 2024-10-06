@@ -73,11 +73,84 @@ Ans:
 -Code and Design Section
 -Attribute Section
 
+
+3. Building Projects Using Android Studio
+Android Studio is the official IDE for Android app development, providing an organized and streamlined environment. Below are the key components when building projects, along with relevant examples.
+
+a) Project Creation: In Android Studio, the project creation wizard helps set up the project by specifying details like the app name (e.g., "MyFirstApp"), package name (e.g., com.example.myfirstapp), and activity template (e.g., "Empty Activity"). The IDE automatically generates the necessary files and folders, including the manifest, Java files, and resource folders.
+
+Example: If you're creating a "ToDoApp", you might choose Kotlin as the language and an Empty Activity as the template.
+b) Palette: The Palette contains various UI components (e.g., TextView, Button, ImageView) that you can drag and drop into the layout. It simplifies the design process by generating XML code automatically.
+
+Example: Dragging a Button from the Palette to the layout editor adds the following XML:
+xml
+Copy code
+<Button android:text="Click Me" ... />
+c) Component Tree: The Component Tree provides a hierarchical view of the UI elements. It shows how different components are nested within layout structures. For instance, if a Button is added inside a LinearLayout, it will appear as a child of the layout in the tree.
+
+Example:
+css
+Copy code
+LinearLayout
+    └── Button
+d) Code and Design Section: Android Studio offers two sections for layout design: the Code view (XML) and the Design view (visual editor). The Code view allows developers to edit XML directly, while the Design view provides a WYSIWYG interface for dragging and arranging components.
+
+Example: In Code view, you might manually modify the text of a Button:
+xml
+Copy code
+<Button android:text="Submit" ... />
+e) Attribute Section: The Attribute Section allows you to modify the properties (e.g., text size, color, margins) of selected components. For example, selecting a TextView in the Design view opens the attributes panel where you can adjust its properties.
+
+Example: Setting the text size in the Attribute Section results in XML like this:
+xml
+Copy code
+<TextView android:textSize="20sp" />
+
+
+
 # 4.Exploring project - android studio
 Ans: 
 -manifest
 -java
 -resource
+
+4. Exploring a Project in Android Studio
+After creating a project, understanding its structure is essential for effective development. Android Studio organizes projects into specific folders and files, each serving a particular role.
+
+a) Manifest: The AndroidManifest.xml file is vital for the Android system to understand your app. It declares activities, services, permissions, and other application configurations. For example, you specify the app's required permissions here.
+
+Example: To request internet access, you add:
+xml
+Copy code
+> *< uses-permission android:name="android.permission.INTERNET" />*
+
+b) Java: The java/ directory contains the source code. This includes activity classes that manage the app's user interface and logic. The MainActivity.java file typically contains the app's main screen.
+
+Example: In MainActivity.java, you might add a button click event:
+java
+Copy code
+Button button = findViewById(R.id.button);
+button.setOnClickListener(v -> {
+    Toast.makeText(this, "Button Clicked", Toast.LENGTH_SHORT).show();
+});
+c) Resources (res): The res/ directory holds all non-code resources, such as layouts, strings, images, and menus.
+
+layout/: Contains XML files that define the UI layout.
+Example: activity_main.xml might define a simple layout with a TextView:
+xml
+Copy code
+<LinearLayout>
+    <TextView android:text="Hello, World!" />
+</LinearLayout>
+values/: Stores reusable constants like strings, colors, and dimensions.
+Example: A string resource for the app name:
+xml
+Copy code
+<string name="app_name">MyFirstApp</string>
+drawable/: Contains images or vector assets used in the app.
+menu/: Stores XML files that define menu structures.
+This structured approach helps developers separate code from resources, making apps easier to maintain and scale.
+
 
 # 5.Creating virtual device
 
@@ -128,13 +201,14 @@ Ans:
  XML	attributes	(view	properties)
  Views	have	properties	that	define	where	a	view	appears	on	the	screen,	its	size,	how	the	view	relates	to	other	views,	and  how	it	responds	to	user	input.	When	defining	views	in	XML,	the	properties	are	referred	to	as	attributes.
 > For	example,	in	the	following	XML	description	of	a	TextView,	the		android:id	,		android:layout_width	, 	android:layout_height	,		android:background	,	are	XML	attributes	that	are	translated	automatically	into	the	TextView's properties:
-* _<TextView_
-							android:id="@+id/show_count"
-							android:layout_width="match_parent"
-							android:layout_height="wrap_content"
-							android:background="@color/myBackgroundColor"
-							android:textStyle="bold"
-							android:text="@string/count_initial_value"
+* _<TextView_ 
+<br>
+							android:id="@+id/show_count" <br>
+							android:layout_width="match_parent"<br>
+							android:layout_height="wrap_content"<br>
+							android:background="@color/myBackgroundColor"<br>
+							android:textStyle="bold"<br>
+							android:text="@string/count_initial_value"<br>
  _/>_
 
 * Attributes	generally	take	this	form: android:attribute_name="value"

@@ -217,12 +217,12 @@ This structured approach helps developers separate code from resources, making a
 > For	example,	in	the	following	XML	description	of	a	TextView,	the		android:id	,		android:layout_width	, 	android:layout_height	,		android:background	,	are	XML	attributes	that	are	translated	automatically	into	the	TextView's properties:
 ```xml
  <TextView 
-							android:id="@+id/show_count" 
-							android:layout_width="match_parent"
-							android:layout_height="wrap_content"
-							android:background="@color/myBackgroundColor"
-							android:textStyle="bold"
-							android:text="@string/count_initial_value"
+	android:id="@+id/show_count" 
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@color/myBackgroundColor"
+	android:textStyle="bold"
+	android:text="@string/count_initial_value"
  />
 ```
 

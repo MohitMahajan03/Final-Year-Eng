@@ -4,7 +4,7 @@
 
 ### Reconnaissance
 
->It is the process of collectoin as much information as possible about a target network.
+>It is the process of collecting as much information as possible about a target network.
 
 * Required for identifying ways to intrude into the victim's networks system
 * It is the first step before mounting any attack
@@ -25,7 +25,7 @@ In this type of info gathering, we collect info about the target indirectly
 * Without direct communication with the target system.
 * Collection of the data that are publically available for webpage/application
 * we can collect information using 3rd party tools
-* we can alse use search engine and search operator available with search engine.
+* we can also use search engine and search operator available with search engine.
 
 ### Active Reconnaissance
 

@@ -73,3 +73,54 @@ ATMs -> Web -> Meters -> Digital locks -> Hospitals -> Vehicles -> Cities -> Dus
 
 * WoT enables access and control over IoT resources and applications using mainstream web technologies (HTML, JS, AJAX etc).
 * Therefore, WoT is based in RESTFUL principles and REST APIs, Which enable both developer and deployers to benefit from the popularity and maturity of web trechnologies.
+
+# LECTURE 2
+
+## Connectivity Terminologies
+<img src = "connectivity.png">
+<br><br>
+
+### Examples
+
+<img src = "IoT_network_configs.png">
+<br>
+
+* The nodes represented by green circles have L: Local link adresses or LU: Link addresses which are unique locally.
+* Nodes within a gateway's jurisdiction have addresses that are valid within the gateway's domain only
+* Same addresses can be repeated in another domain
+* The gateways have a unique network prefix which can be used to identify them globally
+
+>All this is being done to save address space
+
+### Gateway Allotment
+
+* The network is connected to the internet has routers with their set of addresses and ranges
+* These routers have multiple gateways connected to them which can forward packets from the nodes to the internet, only via these routers.
+* The routers assign prefixes to the gateways under them, so that the gateways can be identified with them.
+* If a node moves from one node to another, the prefix also changes, therefore allows mobility of nodes without any confusion.
+
+### Mobility of nodes
+
+* The gateways are attached to a remote anchor by protocols like Mobile IPv6, and are immune to changes of network prefixes.
+* The address of the nodes within the gateways also remain unchanged
+* The nodes can communicate directly to the internet through tunnels created by gateways and routers
+* Nodes can communicate to a remote anchor point instead of channeling their packets through the router using tunneling protocol like IKEv2 (Internet Key Exchange version 2)
+
+### Summary
+
+* All nodes are present in boxes called gateways.
+* Nodes in different gateways can have same local address
+* Gateways are identifiable through unique prefixes
+* Change of address of a gateway does not affect the local address of the nodes
+* If a node moves from one gateway to another, then its address changes.
+
+### Gateways
+
+* IoT gateways with or without proxies are responsible for Interent connectivity snf IoT LAN intra-connectivity
+* Prefixes are obtained using DHCPv6 and delegated to the nodes using SLAAC (stateless addressing)
+* LU addresses are maintained independently of globally routable addresses, in cases where internal address stability is of prime concern
+* LU cannot directly communicate with upper layers which is solved by implementing an application layer proxy
+
+### Multi-homing
+
+* A node or a network connected to multiple networks for improved reliability

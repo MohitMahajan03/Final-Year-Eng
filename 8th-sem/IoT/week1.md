@@ -124,3 +124,56 @@ ATMs -> Web -> Meters -> Digital locks -> Hospitals -> Vehicles -> Cities -> Dus
 ### Multi-homing
 
 * A node or a network connected to multiple networks for improved reliability
+
+# LECTURE 3
+
+## Sensors
+
+> A sensor detects (senses) changes in the ambient conditions or in the state of another device or system, and forwards or processes this information in a certain manner [1].
+> A device which detects or measures a physical property and records, indicates, or otherwise responds to it [2].
+
+* They perform physical changes in response to a stimuli
+* Transducers convert one energy to another kind of energy (mic).
+  
+>Sensor vs Tansducers: Tranducers term is used for both sensors and actuators.
+
+### Features of Sensors
+
+* Sensitive to the measured property
+* Insensitive to any other property likely encountered in its application.
+* It does not influence the measured property
+  
+### Sensor Resolution
+
+* Resolution of the sensor is the smallest change it can detect in the quantity that it is measuring.
+* The more the resolution of the sensorm the more accurate is its precision.
+* A sensor's accuracy does not depend on its resolution.
+  
+### Classification
+
+* Based on Output
+    * Analog: produce continuous output signal or voltage which is generally proportional to the quantity being measured
+    * Digital: Produce discrete (or binary) digital output signals 
+
+* Based on Type
+    * Scalar: Measure only the magnitude (like pressure, strain, etc). Does not measure direction
+    * vector/multimedia: Produce magnitude and direction of the measure.
+  
+<img src = "sensors.png">
+<br>
+
+### Sensorial Deviations
+
+The full scale range of the senosr defines the maximum and minimum values of the measured property
+
+* The sensitivity of a sensor under real conditons may differ from the value specified. This is called sensitivity error.
+* If the output signals differ from the correct value by a constant, the sensor has an offset error or bias.
+
+### Errors
+* Non-linearity is deviation of a sensor's tranfer function from a straight line transfer function (TF)
+* This is defined by the amount the output differs from the ideal TF over the full range of the sensor, which is denoted as percentage of the full range.
+* If the output signal slowly changes independent of the measured property, is called drift
+* Hysteresis error causes the sensor output value to vary depending on the sensor's previous values (heating and magnetic)
+* Quantization error
+* Aliasing error
+* Noise

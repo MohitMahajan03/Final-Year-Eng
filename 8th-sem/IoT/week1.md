@@ -177,3 +177,46 @@ The full scale range of the senosr defines the maximum and minimum values of the
 * Quantization error
 * Aliasing error
 * Noise
+
+# LECTURE 4
+
+## Actuators
+
+* It's a component of a machine or system that moves or controls the mechanism or the system
+* It's a mechanism by which a control system acts on its environment
+* It requires a control signal and a source of energy
+* Upon receiving a control signal they convert this signal into a mechanical motion
+
+### Types
+* Electric based
+* Pnuematic
+* Hydraulic
+* Mechanical
+* Thermal/Magnetic 
+  
+### Hydraulic actuators
+
+* Uses fluid to facilitate mechanical operation
+* Mechanical motion is converted to rotary motion
+
+### Pnuematic Actuators
+* Converts energy from vacuum or compressed air at high pressure into either linear or rotary motion.
+* Quickly responds to start and stop signals
+
+### Electric Actuators
+
+* Powered by a motor
+* Converts electrical to mechanical energy
+
+### Thermal or Magnetic actuators
+
+* They use Shape Memory alloys to convert thermal and magnetic energy to mechanical energy
+
+### Mechanical Actuators
+* Convert rotatory motion to linear motion
+
+### Soft Actuators
+* Used in Robotics and farming, uses Shape memory polymer and change based on stimuli
+
+### Light Activated polymer
+* SMP that is sensitive and responds to a light stimulus

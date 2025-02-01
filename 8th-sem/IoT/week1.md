@@ -189,34 +189,88 @@ The full scale range of the senosr defines the maximum and minimum values of the
 
 ### Types
 * Electric based
+  * Powered by a motor
+  * Converts electrical to mechanical energy
+
 * Pnuematic
+  * Converts energy from vacuum or compressed air at high pressure into either linear or rotary motion.
+  * Quickly responds to start and stop signals
+
 * Hydraulic
+  * Uses fluid to facilitate mechanical operation
+  * Mechanical motion is converted to rotary motion
 * Mechanical
+  * Convert rotatory motion to linear motion
 * Thermal/Magnetic 
-  
-### Hydraulic actuators
-
-* Uses fluid to facilitate mechanical operation
-* Mechanical motion is converted to rotary motion
-
-### Pnuematic Actuators
-* Converts energy from vacuum or compressed air at high pressure into either linear or rotary motion.
-* Quickly responds to start and stop signals
-
-### Electric Actuators
-
-* Powered by a motor
-* Converts electrical to mechanical energy
-
-### Thermal or Magnetic actuators
-
-* They use Shape Memory alloys to convert thermal and magnetic energy to mechanical energy
-
-### Mechanical Actuators
-* Convert rotatory motion to linear motion
+  * They use Shape Memory alloys to convert thermal and magnetic energy to mechanical energy
 
 ### Soft Actuators
 * Used in Robotics and farming, uses Shape memory polymer and change based on stimuli
 
 ### Light Activated polymer
 * SMP that is sensitive and responds to a light stimulus
+
+# LECTURE 5
+
+## Bascis of IoT Networks
+
+### Components
+* Device
+* Local Networks
+* Internet
+* Backend Services
+* Applications
+
+### Functional Components
+* Interactions and communications
+* Processing
+* Internet interaction
+* Web Services
+* application services
+* UI to access IoT 
+
+<img src = "interdepency.png">
+<img src = "architecture.png>
+
+### IoT Categories
+
+* Industrial IoT
+  * Iot device connects to and IP network and the global intrnet
+* Consumer IoT
+  * Comunicates within locally networked devices
+  * Local communication is done mainly via Bluetooth, Zigbee or WiFi.
+  * Generally limited to local communication by a gateway
+
+<img src = "IoT-Gateways.png">
+
+<img src = "IoT-Technologies.png">
+<img src = "IoT-webapps.png">
+<img src = "Key-Technologies.png>
+
+### Challenges
+* Security
+* Scalability
+* Efficiency
+* Bandwidth management
+* Modeling and Analysis
+* Interfacing
+* Interoperability
+* Data Storage
+* Data Analytics
+* Complexity management
+
+### Considerations
+* Governing Network architecture
+* Hardware requirements and cost
+* Multiple networking paradigms are required
+
+### Complexity of Networks
+* Growth of Networks
+* Interference among devices
+* Network Management
+* Heterogenity in networks
+* Protocol standardization within networks
+
+### Wireless Networks
+
+<img src = "Wireless_networks.png">
